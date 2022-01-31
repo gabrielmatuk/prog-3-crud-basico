@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "91cd024f-e5e7-4e69-b354-3e0cf6a4d27f",
+		"name": "Atividade - Web 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALUNOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ALUNOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Teste1\",\r\n    \"email\": \"teste@teste.com\",\r\n    \"endereco\": \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/alunos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"alunos"
+					]
+				},
+				"description": "Cria um aluno\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ALUNOS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"nome\":\"Teste1\",\r\n    \"email\": \"teste@teste.com\",\r\n    \"endereco\": \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/alunos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"alunos"
+					]
+				},
+				"description": "atualiza alunos"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALUNO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/alunos?id=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"alunos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": "aluno especifico\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ALUNO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/alunos/id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"alunos",
+						"id=1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
